@@ -19,8 +19,14 @@ public class App {
             FileReader fr = new FileReader("abcde.txt");
             BufferedReader br = new BufferedReader(fr);
 
-            String zeile = br.readLine();
-            System.out.println(zeile);
+            String zeile = "";
+
+            while (zeile != null) {
+                zeile = br.readLine();
+                if (zeile != null) {
+                    System.out.println(zeile);
+                }
+            }
 
             br.close();
             fr.close();
